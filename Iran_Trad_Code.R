@@ -26,7 +26,7 @@ library(rcdk)
 
 ## Input of TCM herb dataset
 
-df <- readxl::read_excel("E:/My Codes/Traditional Herbs Webscraping/Merging STICH with Pubchem/our_merged_data.xlsx") %>%
+df <- readxl::read_excel("our_data.xlsx") %>%
   dplyr::rename(drug=herb_id, target = ensymble_3, ingredient=`Ingredient name-DNP`, smile = `Canonical SMILE`) %>%
   mutate(drug = tolower(drug), ingredient = tolower(ingredient), cid=tolower(cid), target=toupper(target))
 
